@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function - called alert - coming from standard javascript libary
+
+        // functionname( parameters )
+
+        // text typically as as string - strings denoted in quotes (double or single)
+
+        // create a variable 
+
+        var greeting = "Hello World"; // greeting is ASSIGNED the value of Hello world
+
+        // alert(greeting);  // notice, I don't put variable in quotes
+
+        console.log(greeting);
+
+        var age = 58;
+
+        console.log(age);
+
+
+        // Variable to reprsent your full name and then display it
+
+        var fullName = "John Rowley"
+        console.log(fullName);
+
+        var firstNum = 10;
+        var secondNum = 7;
+        var total = firstNum + secondNum;
+        console.log(`The total is ${total}`); // string interpolation
+        console.log('the total is ' + total); // using + to concatenate (join strings)
+
+        //  It will take me x years to reach a century (100 years)
+        // 58 - 42  
+
+        var century = 100;
+        var age = 58
+        var ageToCentury = century - age;
+
+        // Array - a way of storing a list of items, in this case numbers (integers)
+        var listOfNumbers = [50,30,25,500];
+
+        console.log(`It will take me ${ageToCentury} years to reach ${century} `);
+
+        var yearsToCentury = getYearstoCentury(listOfNumbers[0]); //50
+        console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+
+        yearsToCentury = getYearstoCentury(listOfNumbers[1]); // 30
+        console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+
+        yearsToCentury = getYearstoCentury(listOfNumbers[2]); // 25
+        console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+
+        yearsToCentury = getYearstoCentury(listOfNumbers[0]);
+        if (yearsToCentury > -1) {
+            console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+        } else if (yearsToCentury == -2) { 
+            console.log(`Congratulations! You made it to the next century `);
+   
+        }
+
+        yearsToCentury = getYearstoCentury(0);
+        if (yearsToCentury > -1) {
+            console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+        }
+
+        yearsToCentury = getYearstoCentury(-20);
+        if (yearsToCentury > -1) {
+            console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+        }
+
+        yearsToCentury = getYearstoCentury("boo");
+        if (yearsToCentury > -1) {
+            console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+        }
+
+        yearsToCentury = getYearstoCentury("75");
+        if (yearsToCentury > -1) {
+            console.log(`It will take you ${yearsToCentury} years to reach 100 years `);
+        }
+        // declare the function, name and parameters    ()
+
+        // return -1 if we encounter an error
+        function getYearstoCentury(personAge) {
+            var century = 100;
+
+            if (personAge > 100) {
+                return -2;
+            }
+
+            if (personAge < 1) {
+                return -1;
+            }
+
+            if (isNaN(personAge)) {
+
+                return -1;
+            }
+
+            var ageToCentury = century - personAge;
+
+            return ageToCentury;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+</body>
+
+</html>

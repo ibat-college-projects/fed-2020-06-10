@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+var dwarves = [ "Sleepy", "Dopey","Happy","grumpy","Sneezy","Doc","Bashful"];
+
+console.log(dwarves[1]);
+console.log(`The second dwarf is ${dwarves[1]}`);
+
+var countDwarves = dwarves.length;
+
+console.log(`The count of dwarves is ${countDwarves}`);
+
+var lastDwarf = dwarves.pop();
+
+console.log(`${lastDwarf} is taken off (popped) the list`);
+
+console.log(`The count of dwarves is ${dwarves.length}`);
+
+dwarves.push(lastDwarf)
+
+console.log(`The count of dwarves is ${dwarves.length}`);
+
+console.log(dwarves.join())
+// var dwarves = [ "Sleepy", "Dopey","Happy","grumpy","Sneezy","Doc","Bashful"];
+
+var workDetail = dwarves.splice(2,3);
+console.log(dwarves.join())
+console.log(`The work detail is ${workDetail.join()}`)
+
+// try shift and unshift
+
+var shyDwarf = dwarves.slice(3) // returns an array and leaves original array intact
+console.log(shyDwarf[0])
+
+console.log(dwarves.sort().join())
+
+console.log(dwarves.sort().reverse().join());
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Arrays (Lists)</h1>
+</body>
+
+</html>
