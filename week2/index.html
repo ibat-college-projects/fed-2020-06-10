@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/fleet.js"></script>
+    <script>
+
+
+        var listOfMfs = [];
+        // Version 1
+        fleet.forEach(function (car) {
+
+            // console.log(car.mf);
+            listOfMfs.push(car.mf);
+
+
+        })
+
+        console.log({ listOfMfs });
+
+        // Version 2
+        var listOfModels = fleet.map(function (car) {
+            return car.model;
+        })
+
+        console.log({ listOfModels });
+
+
+        // Version 3
+
+        var listOfColours = fleet.map(car => car.colour)
+
+        console.log({ listOfColours });
+
+
+        // Filter function 
+        var findCars = fleet.filter(function (car) {
+
+            return car.mf === 'Volkswagen';
+        })
+
+        console.log({ findCars });
+
+
+        // Filter function 
+        var findFordCars = fleet.filter(car => car.mf === 'Ford');
+        console.log({ findFordCars });
+
+
+        const rebels = pilots.filter(pilot => pilot.faction === "Rebels");
+        const empire = pilots.filter(pilot => pilot.faction === "Empire");
+
+        console.log({ rebels });
+        console.log({ empire });
+
+
+        var foundPilot = pilots.find(x => x.id === 8);
+
+        console.log({ foundPilot })
+
+
+
+        // Version 2
+        var listOfModelsWithYear = fleet.map(function (car) {
+            return {
+                'mf': car.mf,
+                'year': 2020
+
+            }
+        })
+
+        console.log({ listOfModelsWithYear })
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

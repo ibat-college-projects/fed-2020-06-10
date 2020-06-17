@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var coloursOfTheRainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet', 'Green'];
+
+        // iterators start with the letter i
+        var sizeOfList = coloursOfTheRainbow.length;
+
+        for (i = 0; i < sizeOfList; i++) {
+
+            //    console.log(`Colour is: ${coloursOfTheRainbow[i]}`);
+        }
+
+
+        //  raw javascript to tell me if a item is contained in a list
+
+        // green
+
+        // function 
+
+
+        findElementInSimpleList(coloursOfTheRainbow, 'Green');
+        var foundItems = getAllMatchedElements(coloursOfTheRainbow, 'Green');
+        console.log(foundItems);
+
+        function findElementInSimpleList(listOfItemsToSearch, itemToSearch) {
+
+            var found = false;
+
+            for (i = 0; i < listOfItemsToSearch.length; i++) {
+                console.log(`Searching for ${itemToSearch.toLowerCase()}`);
+
+                if (itemToSearch.toLowerCase() === listOfItemsToSearch[i].toLowerCase()) {
+                    found = true;
+                    console.log('I found the item');
+                    break;
+                }
+
+            }
+
+            return found ? 1 : 0;
+
+        }
+
+        function getAllMatchedElements(listOfItemsToSearch, itemToSearch) {
+
+            var foundItems = [];
+
+            for (i = 0; i < listOfItemsToSearch.length; i++) {
+                
+                console.log(`Searching for ${itemToSearch.toLowerCase()}`);
+
+                if (itemToSearch.toLowerCase() === listOfItemsToSearch[i].toLowerCase()) {
+                   foundItems.push(itemToSearch);
+                }
+
+            }
+
+            return foundItems;
+
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

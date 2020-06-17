@@ -1,0 +1,16 @@
+Introduciton to while loop
+
+Do while and For Loop
+
+Midway and Modulus in a loop and ternary operator
+
+For Loop, using iterator, using variables inside variable
+
+Finding and Matching elements
+
+Getting all matched elments 
+
+for of example with property and keys
+
+map, filter, find
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // initialiser
+        var counter = 0;
+        console.log(`I am on staircase step ${counter}`);
+
+        //increment
+        counter = counter + 1;
+
+        // block of statements
+        console.log(`I am on staircase step ${counter}`);
+        counter = counter + 1;
+        console.log(`I am on staircase step ${counter}`);
+        counter = counter + 1;
+        console.log(`I am on staircase step ${counter}`);
+        counter++;
+        console.log(`I am on staircase step ${counter}`);
+        console.log(`I am on staircase step ${counter++}`);
+        console.log(`I am on staircase step ${counter++}`);
+
+
+        /*
+        while ( I am not at the top of the stairs)
+            keep going up
+
+            */
+        var step = 0;
+        var topOfStairs = 10;
+        while (step < topOfStairs) {
+
+            console.log(`I am on staircase step ${step}`);
+
+            step++;
+        }
+
+        console.log(`I am at the top`);
+
+        // Do while 
+        step = 0
+        do {
+            console.log(`I am on staircase step ${step}`);
+            step++;
+
+        } while (step < topOfStairs)
+
+
+        // Loop and output a mesasge when you are on the middle step
+
+        // set up the mid way  point
+        var midWay = parseInt(topOfStairs / 2)
+        console.log(midWay)
+        for (step = 0; step < topOfStairs; step++) {
+
+            console.log(`I am on staircase step ${step}`);
+
+            if (step == midWay) {
+                console.log(`I am midWay`);
+            }
+
+            //   var x = step % 2;
+
+            /// if x == 0 its even else it is odd
+
+            // ternary operator - useful for one line if else statement types
+            var stepType =  step % 2 == 0 ?  `on an even` :  `on an odd`
+
+            console.log(`I am on ${stepType} step`);
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

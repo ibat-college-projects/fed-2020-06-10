@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+
+        var carMF = 'Volkswagen';
+        var carModel = `Golf`;
+        var carEngine = '1.6';
+        var carColour = 'Red';
+        var carType = 'Hatchback'
+
+
+        var carMF1 = 'Nissan';
+        var carModel1 = `Navara`;
+        var carEngine1 = '2.5';
+        var carColour1 = 'Grey';
+        var carType = 'Pickup';
+
+        // Javascript 
+        var car = {
+            'mf': 'Ford',
+            'model': `Fiesta`,
+            'engine': '0.1',
+            'colour': 'Pink',
+            'type': 'Sedan'
+
+        };
+
+
+
+
+
+        console.log(car);
+        console.log(`The colour of the car is ${car.colour}`);
+
+
+
+
+        var fleet = [
+            {
+                'mf': 'Volkswagen',
+                'model': `Golf`,
+                'engine': '1.6',
+                'colour': 'Red',
+                'type': 'Hatchback'
+            },
+
+            {
+                'mf': 'Nissan',
+                'model': `Navara`,
+                'engine': '2.5',
+                'colour': 'Grey',
+                'type': 'Pickup'
+            },
+
+            {
+                'mf': 'Ford',
+                'model': `Fiesta`,
+                'engine': '0.1',
+                'colour': 'Pink',
+                'type': 'Sedan'
+
+            }
+
+
+        ];
+
+
+
+        console.log({ fleet })
+
+        // Can you write a function (raw) that gets me the list of manufacturers?
+
+        var listOfManufacturers = getAllManufacturers(fleet);
+        console.log({ listOfManufacturers })
+
+        function _getAllManufacturers(listOfItemsToSearch) {
+
+            var foundItems = [];
+
+            for (i = 0; i < listOfItemsToSearch.length; i++) {
+                foundItems.push(listOfItemsToSearch[i].mf);
+            }
+            return foundItems;
+        }
+
+        // For of loop
+        function getAllManufacturers(listOfItemsToSearch) {
+
+            var foundItems = [];
+
+            for (const item of listOfItemsToSearch) {
+
+                foundItems.push(item.mf)
+
+            }
+            return foundItems;
+        }
+
+        //  https://www.geeksforgeeks.org/how-to-get-a-key-in-a-javascript-object-by-its-value/
+
+        function getKeyByValue(object, value) {
+
+            for (var prop in object) {
+                if (object.hasOwnProperty(prop)) {
+                    if (object[prop] === value) return prop;
+                }
+
+            }
+        }
+
+        var found = getKeyByValue(fleet[2], 'Pink');
+
+        console.log({found});
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
