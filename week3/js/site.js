@@ -58,3 +58,11 @@ function resetField() {
     var object = document.getElementById('inputDemo');
     object.value = 'Enter your email for newsletter';
 }
+
+
+function sum() {
+    var num1 = +document.getElementById('num1').value;
+    var num2 = +document.getElementById('num2').value;
+    document.getElementById('messagePanel').innerHTML = num1 + num2;
+
+}
