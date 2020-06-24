@@ -4,6 +4,17 @@ console.log(' js file is loaded');
 function init() {
     showDate();
     setUpListeners();
+
+
+    const article = document.querySelector('#electric-cars');
+ 
+    console.log(`Columns: ${article.dataset.columns}`) // "3"
+    console.log(`Index Number:${article.dataset.indexNumber}`) // "12314"
+    console.log(`Parent: ${article.dataset.parent}`) // "cars"
+
+
+
+
 }
 
 function setUpListeners() {
