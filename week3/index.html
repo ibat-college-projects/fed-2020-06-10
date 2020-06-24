@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/site.js"></script>
+    <style>
+        .messagePanel {
+            border: solid 1px red;
+            width: 85%;
+            height: 150px;
+            margin-top: 15px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body onLoad="init()" >
+    <h1>Week 3 : <span id="currentDate">?</span>  </h1>
+    <p id="firstPara">This is the first paragraph</p>
+    <button onClick="sendMessageToConsole()">Send Message to Console</button>
+    <button onClick="showDate()">Show Date</button>
+
+    <button id="btnFirstPara">Grab First Para text</button>
+
+    <div class="messagePanel" id="messagePanel">
+
+    </div>
+
+
+    <input type="text" value="Enter your email for newsletter" onFocus="clearField()"
+     onBlur="resetField()" id="inputDemo">
+
+</body>
+</html>
