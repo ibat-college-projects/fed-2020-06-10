@@ -19,6 +19,7 @@ function populateSelectMF() {
     mfs.unshift(firstItem)
 
       for (var i = 0; i < mfs.length; i++) {
+          
         let opt1 = document.createElement("option");
         opt1.value = i;
         opt1.text = mfs[i];
