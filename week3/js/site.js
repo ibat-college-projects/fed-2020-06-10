@@ -18,7 +18,7 @@ function setUpListeners() {
    var seating = document.querySelectorAll('.seat');
 
    seating.forEach(seat => {
-
+ 
     });
    
 }
