@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Document</title>
+    <script src="./js/site.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <input class="form-control" type="text" id="tbCarMF" />
+                <input class="form-control" type="text" id="tbCarModel" />
+                <input class="form-control" type="text" id="tbCarEngine" />
+
+                <button class="btn btn-primary" onclick="btnSave()">Save</button>
+                <button class="btn btn-primary" onclick="btnRetrieve()">Retrieve</button>
+
+            </div>
+            <div class="col-md-6">
+
+                <table id="tableData" class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>MF</th>
+                            <th>Model</th>
+                            <th>Engine</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyCarData">
+                        
+
+                    </tbody>
+
+
+                </table>
+                <button class="btn btn-primary" onclick="clearFleetFromStorage()">Clear</button>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
