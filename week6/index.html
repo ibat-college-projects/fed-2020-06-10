@@ -13,16 +13,27 @@
 </head>
 <body>
  
+
+<div class="container">
+
+    <p> 
+        <label><input type="radio" name="toppingChoice" value="meat"> Meat</label> 
+        <label><input type="radio" name="toppingChoice" value="vegetarian"> Vegetarian</label>
+        <label><input type="radio" name="toppingChoice" value="both"> Both</label>
+    </p>
+</div>
+
                 
 <div class="container">
 <!-- https://mdbootstrap.com/snippets/jquery/mdbootstrap/821010 -->
 <!-- https://pastebin.com/PuiJBNf2 -->
-    <ul class="list-group list-group-flush">
+
+    <ul class="list-group list-group-flush" id="listOfMeatToppings">
         <li class="list-group-item">
           <!-- Default checked -->
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="SelectAllMeat">
-            <label class="custom-control-label" for="SelectAllMeat">All</label>
+            <label class="custom-control-label" for="SelectAllMeat">All Meat</label>
           </div>
         </li>
         <li class="list-group-item">
@@ -54,6 +65,47 @@
           </div>
         </li>
       </ul>
+
+      <hr />
+
+      <ul class="list-group list-group-flush"  id="listOfVegToppings">
+        <li class="list-group-item">
+          <!-- Default checked -->
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="SelectAllVegetarian">
+            <label class="custom-control-label" for="SelectAllVegetarian">All Vegetarian</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="Vegetarian custom-control-input" id="vegcheck2" name="Vegetarian">
+            <label class="custom-control-label" for="vegcheck2">Pineapple</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+         
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="Vegetarian custom-control-input" id="vegcheck3"  name="Vegetarian">
+            <label class="custom-control-label" for="vegcheck3">Aubergine</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+     
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="Vegetarian custom-control-input" id="vegcheck4"  name="Vegetarian">
+            <label class="custom-control-label" for="vegcheck4">Mushrooms</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+       
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="Vegetarian custom-control-input" id="vegcheck5"  name="Vegetarian">
+            <label class="custom-control-label" for="vegcheck5">Brocolli</label>
+          </div>
+        </li>
+      </ul>
+      
 
 </div>
     
