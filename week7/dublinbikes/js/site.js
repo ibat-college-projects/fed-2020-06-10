@@ -1,10 +1,5 @@
 $(function () {
 
-    const message = `jquery is loaded`;
-    console.log(message)
-
-    $('#messagePanel').html(message)
-    sendMessage(message);
 
     setup();
 
@@ -13,7 +8,7 @@ $(function () {
 function setup() {
 
     $('#btnLoadData').on('click', function () {
-        sendMessage(`button  is clicked`);
+
         const contract_name = `dublin`;
         const api_key = `923b9f8762f3bacf246b898bf50e66550436b145`;
         const url = `https://api.jcdecaux.com/vls/v1/stations?contract=${contract_name}&apiKey=${api_key}`;
@@ -28,15 +23,28 @@ function setup() {
 
 
 function renderJsonData(jsonData) {
-    
+    console.log(jsonData);
     htmlString = [];
+
     for (const station of jsonData) {
-       
+        
+        let { number, name, address, position, available_bike_stands, available_bikes } = station;
+
+        htmlString.push(`<tr>`);
+        htmlString.push(`<td>${number}</td>`);
+        htmlString.push(`<td>${name}</td>`);
+        htmlString.push(`<td>${address}</td>`);
+        htmlString.push(`<td>${position.lat}</td>`);
+        htmlString.push(`<td>${position.lng}</td>`);
+        htmlString.push(`<td>${available_bike_stands}</td>`);
+        htmlString.push(`<td>${available_bikes}</td>`);
+        htmlString.push(`</tr>`);
+
 
 
     }
 
-    $('#messagePanel').html(htmlString.join(' '));
+    $('#tbodyDublinBikes').append(htmlString.join(' '));
 
 }
 
